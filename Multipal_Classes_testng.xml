@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="xml_SUITE_Study.TestClass_Include">
+        <methods>
+          <include name ="TestCase1()"/>  <!--Include is used to add which method we want in xml file/suit.-->
+          <include name ="TestCase5()"/>
+        </methods>
+       </class>
+      <class name="xml_SUITE_Study.TestClass_Exclude">
+       <methods>
+        <exclude name ="TestCase7"/>  <!-- Exclude is used to skip which method we don't want in xml file/suit */-->
+        <exclude name ="TestCase9"/>
+       </methods>
+      </class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+
+<!--Including or excluding methods from multiple classes-->
